@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/static/bg.png);
+    background-blend-mode:difference;
+  }
+
+.heading p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 25px;
+    color: rgb(206, 197, 245);
+}
+
+.card{
+    width: 15rem;
+    margin: 10px;
+    margin-bottom: 40px;
+    min-height: 90%;
+    max-height: 90%;
+    font-size: 15px;
+}
+
+.card-img-top {
+    width: 100%; /* Make the image take the full width of the card */
+    height: 300px; /* Set a fixed height for the image */
+    object-fit: contain; /* Ensure the image covers the entire area while maintaining aspect ratio */
+    margin-top: 5px;
+
+}
+
+.card-title {
+    max-height: 50px; /* Limit the maximum height of the card title */
+    overflow: hidden; /* Hide any overflow content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for long titles */
+}
+
+
+.rec-form{
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 20px;
+
+}
+
+
+button {
+    width: 320px;
+    height: 50px;
+    margin-top: 40px;   
+    overflow: hidden;
+    border: none;
+    color: #d9ebf6;
+    background: none;
+    position:relative;
+    padding: 1.5em;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+  
+button > div,
+button > svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+  
+button:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background: currentColor;
+    transition: transform 0.25s ease-out;
+    
+}
+  
+button:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+  
+button .clone > *,
+button .text > * {
+    opacity: 1;
+    font-size: 1.3rem;
+    transition: 0.2s;
+    margin-left: 4px;
+}
+  
+button .clone > * {
+    transform: translateY(60px);
+}
+  
+button:hover .clone > * {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+  
+button:hover .text > * {
+    opacity: 1;
+    transform: translateY(-60px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+  
+button:hover .clone > :nth-child(1) {
+    transition-delay: 0.15s;
+}
+  
+button:hover .clone > :nth-child(2) {
+    transition-delay: 0.2s;
+}
+  
+  button:hover .clone > :nth-child(3) {
+    transition-delay: 0.25s;
+  }
+  
+  button:hover .clone > :nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  /* icon style and hover */
+  button svg {
+    width: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-50deg);
+    transition: 0.2s ease-out;
+  }
+  
+  button:hover svg {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    flex: 1;
+  }
+  
+  .footer {
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  .footer-social a {
+    display: inline-block;
+  }
+  
+  .footer-social img {
+    width: 30px;
+    margin: 0 5px;
+  }
+  
